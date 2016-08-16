@@ -1,0 +1,3 @@
+id, created_by, public, sent_to, text_content
+1, danielle@email.com, True, null, "This was a public chirp I sent"
+2, danielle@email.com, False, bobsmith@email.com, "This was a private chirp I sent to bob"
