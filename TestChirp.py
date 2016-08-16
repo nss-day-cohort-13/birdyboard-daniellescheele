@@ -1,27 +1,21 @@
 import unittest
+from chirp import *
+from user import *
 
 class TestChirp(unittest.TestCase):
 	@classmethod
 	def setUpClass(self):
-		pass
+		self.cindy = User('cindy duer', 'cindysue' )
+		self.test_chirp = Chirp("cindysue", self.cindy.user_id, "this is a message")
 
 	def test_chirp_is_created(self):
-		pass
+		self.assertEqual(self.cindy.screen_name, "cindysue")
+		self.assertEqual(self.test_chirp.message, "this is a message")
+		self.assertEqual(self.test_chirp.user_id, self.cindy.user_id)
+		self.assertIsNotNone(self.test_chirp.conversation_id)
+		self.assertIsNotNone(self.test_chirp.chirp_id)
 
-	def test_chirp_id_is_created(self):
-		pass
 
-	def test_chirp_has_a_user(self):
-		pass
-
-	def test_conversation_id_was_created(self):
-		pass
-
-	def test_time_stamp_was_created(self):
-		pass
-
-	def_test_get_chirp_(self):
-		pass
 
 
 if __name__ == '__main__':

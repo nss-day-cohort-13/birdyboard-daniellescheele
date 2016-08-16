@@ -1,10 +1,14 @@
 import unittest
+from private_chirp import *
+from user import *
+
 
 class TestPrivateChirp(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(self):
-		pass
+		self.dan = User('dan duer','dannyd')
+		self.test_private_chirp = PrivateChirp('lancelot', )
 
 
 	def test_chirp_has_a_receiver(self):

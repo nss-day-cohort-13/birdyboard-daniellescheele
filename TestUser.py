@@ -1,29 +1,18 @@
 import unittest
+from user import *
 
-class TestUser(unittest.Testcase):
+class TestUser(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(self):
-		pass
+		self.danielle = User('danielle duer', 'danyellie')
 
 
 	def test_user_is_created(self):
-		pass
+		self.assertEqual('danielle duer', self.danielle.full_name)
+		self.assertEqual('danyellie', self.danielle.screen_name)
+		self.assertIsNotNone(self.danielle.user_id)
 
-
-	def test_screen_name_is_created(self):
-		pass
-
-
-	def test_user_has_a_uuid(self):
-		pass
-
-
-	def test_get_user_(self):
-		pass
-
-	def test_get_screen_name(self):
-		pass
 
 
 
